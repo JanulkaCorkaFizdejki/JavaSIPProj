@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="center" hgap="0" prefHeight="400.0" prefWidth="600.0" stylesheets="@../main/resources/main.css" vgap="0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sipphone.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <VBox alignment="BASELINE_CENTER" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;">
+         <children>
+             <MenuBar fx:id="MinMenu" prefHeight="25.0" prefWidth="600.0">
+                 <menus>
+                     <Menu mnemonicParsing="false" text="Akcje">
+                         <items>
+                             <MenuItem fx:id="callList" mnemonicParsing="false" onAction="#btn_numbers" text="Call List" />
+                             <MenuItem fx:id="lastCallList" mnemonicParsing="false" onAction="#btn_last_call_list" text="Last Call List" />
+                             <MenuItem fx:id="addUser" mnemonicParsing="false" onAction="#btn_adduser" text="Add User" />
+                             <MenuItem fx:id="editList" mnemonicParsing="false" onAction="#btn_remove_number" text="Edit Contact List" />
+                         </items>
+                     </Menu>
+                 </menus>
+             </MenuBar>
+            <ImageView fx:id="imgMainBanner" fitHeight="267.0" fitWidth="259.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../main/resources/phone_2.jpg" />
+               </image>
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin></ImageView>
+             <ToolBar minWidth="600.0" prefHeight="36.0" prefWidth="600.0">
+                 <items>
+                     <Button mnemonicParsing="false" onAction="#btn_adduser" prefHeight="25.0" prefWidth="120.0" text="Add User" />
+                     <Button id="btn_test" fx:id="btn_test" mnemonicParsing="false" onAction="#start_btn" prefHeight="25.0" prefWidth="120.0" text="TEST" />
+                     <Button id="btn_numbers" mnemonicParsing="false" onAction="#btn_numbers" prefHeight="25.0" prefWidth="120.0" text="Contact List" />
+                     <Button fx:id="btn_remove_user" mnemonicParsing="false" onAction="#btn_remove_number" prefHeight="25.0" prefWidth="120.0" text="Remove User" />
+                 </items>
+               <padding>
+                  <Insets bottom="20.0" left="60.0" top="20.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+             </ToolBar>
+         </children>
+      </VBox>
+   </children>
+</GridPane>

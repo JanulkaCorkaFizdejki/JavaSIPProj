@@ -1,0 +1,5 @@
+BAZA DANYCH
+-----------------------
+
+1. Nazwy użytkowników - UNIKALNE
+	- sparwdzanie nazw użytkowników

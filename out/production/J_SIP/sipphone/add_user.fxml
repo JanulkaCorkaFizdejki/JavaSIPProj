@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sipphone.ViewContollerAddUser">
+   <children>
+      <Pane prefHeight="400.0" prefWidth="300.0">
+         <children>
+            <Button layoutX="76.0" layoutY="311.0" mnemonicParsing="false" onMouseClicked="#addUserActn" prefHeight="25.0" prefWidth="149.0" text="Dodaj" />
+            <Label layoutX="32.0" layoutY="151.0" text="Nr telefonu:" />
+            <Label layoutX="32.0" layoutY="168.0" text="format: (np. 48 666 666 666)">
+               <font>
+                  <Font size="8.0" />
+               </font>
+            </Label>
+            <TextField fx:id="lbl_number" layoutX="31.0" layoutY="188.0" prefHeight="25.0" prefWidth="238.0" />
+            <TextField fx:id="lbl_user_name" layoutX="31.0" layoutY="256.0" prefHeight="25.0" prefWidth="238.0" />
+            <Label layoutX="17.0" layoutY="192.0" text="+" />
+            <Label layoutX="32.0" layoutY="232.0" text="Nazwa użytkownika" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
