@@ -23,6 +23,7 @@
                          <items>
                              <MenuItem fx:id="callList" mnemonicParsing="false" onAction="#btn_numbers" text="Call List" />
                              <MenuItem fx:id="lastCallList" mnemonicParsing="false" onAction="#btn_last_call_list" text="Last Call List" />
+                             <MenuItem fx:id="keyBoard" mnemonicParsing="false" onAction="#btn_keyboard_panel" text="Keyboard" />
                              <MenuItem fx:id="addUser" mnemonicParsing="false" onAction="#btn_adduser" text="Add User" />
                              <MenuItem fx:id="editList" mnemonicParsing="false" onAction="#btn_remove_number" text="Edit Contact List" />
                          </items>

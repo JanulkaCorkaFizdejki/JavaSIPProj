@@ -1,6 +1,7 @@
 package sipphone;
 import javafx.event.ActionEvent;
 import sipphone.model.CurrentConnect;
+import sipphone.viewControllers.ViewControllerKeyboardPanelPhone;
 import sipphone.viewControllers.ViewControllerLastCallList;
 import webphone. *;
 
@@ -58,5 +59,10 @@ public class Controller {
     public void btn_last_call_list(ActionEvent actionEvent) throws IOException {
         ViewControllerLastCallList viewControllerLastCalltList = new ViewControllerLastCallList();
         viewControllerLastCalltList.newpage("show");
+    }
+
+    public void btn_keyboard_panel(ActionEvent actionEvent) throws IOException {
+        ViewControllerKeyboardPanelPhone viewControllerKeyboardPanelPhone = new ViewControllerKeyboardPanelPhone();
+        viewControllerKeyboardPanelPhone.newpage("show");
     }
 }

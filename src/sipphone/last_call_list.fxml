@@ -7,15 +7,15 @@
    <children>
       <VBox prefHeight="400.0" prefWidth="600.0">
          <children>
-            <TableView fx:id="tbl_last_call" prefHeight="405.0" prefWidth="600.0">
+            <TableView fx:id="tbl_last_call" prefHeight="400.0" prefWidth="600.0" stylesheets="@../main/resources/main.css">
               <columns>
-                  <TableColumn fx:id="col_lp" prefWidth="41.0" text="Lp." />
-                   <TableColumn fx:id="col_numbers" prefWidth="125.0" text="Numer" />
-                  <TableColumn fx:id="col_users" prefWidth="59.0" text="Uzytkownik" />
-                  <TableColumn fx:id="col_start_call" prefWidth="92.0" text="Start" />
-                  <TableColumn fx:id="col_stop_call" prefWidth="100.0" text="Stop" />
-                  <TableColumn fx:id="col_status_call" prefWidth="85.0" text="Status" />
-                  <TableColumn fx:id="col_time_call" prefWidth="97.0" text="Czas Poł." />
+                  <TableColumn fx:id="col_lp" prefWidth="26.0" text="Lp." />
+                   <TableColumn fx:id="col_numbers" prefWidth="100.0" text="Numer" />
+                  <TableColumn fx:id="col_users" prefWidth="134.0" text="Uzytkownik" />
+                  <TableColumn fx:id="col_start_call" prefWidth="120.0" text="Start" />
+                  <TableColumn fx:id="col_stop_call" prefWidth="120.0" text="Stop" />
+                  <TableColumn fx:id="col_status_call" prefWidth="30.0" text="Status" />
+                  <TableColumn fx:id="col_time_call" prefWidth="80.0" text="Czas Poł." />
               </columns>
             </TableView>
          </children></VBox>

@@ -13,10 +13,10 @@ import javafx.stage.Stage;
 import sipphone.DabatabaseManager;
 import sipphone.SettingsDB;
 import sipphone.datamodel.DataModelLastCallList;
-import sipphone.datamodel.DataModelNumberList;
 import sipphone.settings.GlobalQueryDB;
 import sipphone.settings.SettingsWindows;
 
+import java.awt.*;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.ResultSet;
@@ -73,6 +73,7 @@ public class ViewControllerLastCallList implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        tbl_last_call.setStyle("-fx-font: 10 arial; -fx-base: #b6e7c9;");
         try {
             loadData();
         } catch (SQLException e) {

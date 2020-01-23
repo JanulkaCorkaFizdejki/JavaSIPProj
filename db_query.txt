@@ -9,3 +9,6 @@ UPDATE connect_list SET date_time_stop=datetime("now") WHERE id=14
 
 4) (for trigger update)
 UPDATE connect_time SET conn_time=(CAST(strftime('%s', NEW.date_time_stop) AS INTEGER) - CAST(strftime('%s', OLD.date_time_start) AS INTEGER)) WHERE id
+
+5)
+SELECT * FROM connect_list INNER JOIN connect_time ON connect_list.id = connect_time.id_connect_list
