@@ -7,7 +7,7 @@
    <children>
       <VBox prefHeight="400.0" prefWidth="600.0">
          <children>
-            <TableView fx:id="tbl_last_call" prefHeight="400.0" prefWidth="600.0" stylesheets="@../main/resources/main.css">
+            <TableView fx:id="tbl_last_call" onContextMenuRequested="#contextMenu" prefHeight="400.0" prefWidth="600.0" stylesheets="@../main/resources/main.css">
               <columns>
                   <TableColumn fx:id="col_lp" prefWidth="26.0" text="Lp." />
                    <TableColumn fx:id="col_numbers" prefWidth="100.0" text="Numer" />

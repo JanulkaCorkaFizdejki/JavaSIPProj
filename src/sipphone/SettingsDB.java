@@ -10,6 +10,7 @@ public class SettingsDB {
         numbers,
         users,
         connect_list,
-        connect_time
+        connect_time,
+        user_auth
     }
 }

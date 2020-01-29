@@ -1,16 +1,30 @@
 package sipphone;
 import javafx.event.ActionEvent;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
 import sipphone.model.CurrentConnect;
+import sipphone.model.NetworkDataManager;
+import sipphone.model.SystemMotherBoardNumber;
+import sipphone.settings.GlobalQueryDB;
+import sipphone.settings.SettingsDataNetwork;
 import sipphone.viewControllers.ViewControllerKeyboardPanelPhone;
 import sipphone.viewControllers.ViewControllerLastCallList;
+import sipphone.viewControllers.ViewControllerLoginPanel;
 import webphone. *;
 
 import java.io.IOException;
+import java.net.URL;
 import java.security.NoSuchAlgorithmException;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ResourceBundle;
+import java.util.logging.Logger;
 
 
-public class Controller {
-    webphone wobj = new webphone();
+public class Controller implements Initializable {
+    private boolean set_login_status = false;
+    public Label login_status;
+    // webphone wobj = new webphone();
 
     public void start_btn(ActionEvent actionEvent) throws IOException, NoSuchAlgorithmException {
 //        wobj.API_SetParameter("serveraddress", "46.105.182.20");
@@ -32,12 +46,16 @@ public class Controller {
 ////        final String decryptedData = crypto.decrypt("[B@4f0d65xxxb", iv2, secretKey);
 ////        System.out.println(decryptedData);
           // Md5.getMd5("eloelś");
-        DabatabaseManager DBM = new DabatabaseManager(SettingsDB.dbname);
-        if (CurrentConnect.id_current_connect > 0) {
-            String query = "UPDATE connect_list SET date_time_stop=datetime(\"now\") WHERE id="+CurrentConnect.id_current_connect;
-            DBM.update(query);
-            CurrentConnect.id_current_connect = 0;
-        }
+//        DabatabaseManager DBM = new DabatabaseManager(SettingsDB.dbname);
+//        if (CurrentConnect.id_current_connect > 0) {
+//            String query = "UPDATE connect_list SET date_time_stop=datetime(\"now\") WHERE id="+CurrentConnect.id_current_connect;
+//            DBM.update(query);
+//            CurrentConnect.id_current_connect = 0;
+//        }
+
+        // TEST DATA MANAGER
+//        NetworkDataManager networkDataManager = new NetworkDataManager(SettingsDataNetwork.felgApiBaseURL_AUTH);
+//        networkDataManager.logIn();
 
     }
 
@@ -65,4 +83,39 @@ public class Controller {
         ViewControllerKeyboardPanelPhone viewControllerKeyboardPanelPhone = new ViewControllerKeyboardPanelPhone();
         viewControllerKeyboardPanelPhone.newpage("show");
     }
+
+    public void btn_login_panel(ActionEvent actionEvent) throws IOException {
+        ViewControllerLoginPanel viewControllerLoginPanel = new ViewControllerLoginPanel();
+        viewControllerLoginPanel.newpage("show");
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        try {
+            initialView();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void initialView () throws SQLException {
+
+        DabatabaseManager DBM = new DabatabaseManager(SettingsDB.dbname);
+        String query = "SELECT status FROM user_auth LIMIT 1";
+        ResultSet rs = DBM.select("empty", query, true);
+
+        while (rs.next()) {
+            this.set_login_status = rs.getBoolean ("status");
+            break;
+        }
+
+        if (this.set_login_status) {
+            System.out.println("ZALOGOWANY");
+            login_status.setText("ZALOGOWANY");
+        } else {
+            System.out.println("NIEZALOGOWANY");
+            login_status.setText("NIEZALOGOWANY");
+        }
+    }
+
 }

@@ -8,6 +8,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.ContextMenuEvent;
 import javafx.stage.Stage;
 import sipphone.datamodel.DataModelNumberList;
 import sipphone.settings.GlobalQueryDB;
@@ -96,4 +97,5 @@ public class ViewControllerRemoveNumber implements Initializable {
         alert.setOnCloseRequest(event->alert.close());
         return (btn_res.get() == buttonOk) ? true : false;
     }
+
 }

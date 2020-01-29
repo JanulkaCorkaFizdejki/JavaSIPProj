@@ -7,22 +7,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/sipphone/keyboard_panel_phone.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sipphone/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sipphone/viewControllers/ViewControllerKeyboardPanelPhone.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/loader.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/plus-2-24.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sipphone/datamodel/DataModelLogin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sipphone/login_panel.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sipphone/model/SystemMotherBoardNumber.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sipphone/viewControllers/ViewControllerLoginPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db_query.txt" beforeDir="false" afterPath="$PROJECT_DIR$/db_query.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J_SIP/externalDataModel/TimeFormatViews.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/J_SIP/externalDataModel/TimeFormatViews.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J_SIP/main/resources/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/J_SIP/main/resources/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/J_SIP/sipphone/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/J_SIP/sipphone/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/J_SIP/sipphone/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/J_SIP/sipphone/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/J_SIP/sipphone/SettingsDB$DBTableSip.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/J_SIP/sipphone/SettingsDB$DBTableSip.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/J_SIP/sipphone/ViewControllerRemoveNumber.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/J_SIP/sipphone/ViewControllerRemoveNumber.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/J_SIP/sipphone/keyboard_panel_phone.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/J_SIP/sipphone/keyboard_panel_phone.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/J_SIP/sipphone/last_call_list.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/J_SIP/sipphone/last_call_list.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/J_SIP/sipphone/model/NetworkDataManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/J_SIP/sipphone/model/NetworkDataManager.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/J_SIP/sipphone/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/J_SIP/sipphone/sample.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/J_SIP/sipphone/settings/SettingsDataNetwork.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/J_SIP/sipphone/settings/SettingsDataNetwork.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/J_SIP/sipphone/viewControllers/ViewControllerKeyboardPanelPhone$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/J_SIP/sipphone/viewControllers/ViewControllerKeyboardPanelPhone$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/J_SIP/sipphone/viewControllers/ViewControllerKeyboardPanelPhone.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/J_SIP/sipphone/viewControllers/ViewControllerKeyboardPanelPhone.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/J_SIP/sipphone/viewControllers/ViewControllerLastCallList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/J_SIP/sipphone/viewControllers/ViewControllerLastCallList.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/externalDataModel/TimeFormatViews.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/externalDataModel/TimeFormatViews.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sipphone/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sipphone/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sipphone/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sipphone/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sipphone/SettingsDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sipphone/SettingsDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sipphone/ViewControllerRemoveNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sipphone/ViewControllerRemoveNumber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sipphone/keyboard_panel_phone.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sipphone/keyboard_panel_phone.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sipphone/last_call_list.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sipphone/last_call_list.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sipphone/model/NetworkDataManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sipphone/model/NetworkDataManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sipphone/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sipphone/sample.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sipphone/settings/SettingsDataNetwork.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sipphone/settings/SettingsDataNetwork.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sipphone/viewControllers/ViewControllerKeyboardPanelPhone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sipphone/viewControllers/ViewControllerKeyboardPanelPhone.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sipphone/viewControllers/ViewControllerLastCallList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sipphone/viewControllers/ViewControllerLastCallList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -142,11 +156,11 @@
       <recent name="C:\SIP_PROJECT\JAVA\JAVA_DESKTOP" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\SIP_PROJECT\JAVA\JAVA_DESKTOP\src\sipphone" />
+      <recent name="C:\SIP_PROJECT\JAVA\JAVA_DESKTOP\out\production\J_SIP\main\resources" />
       <recent name="C:\SIP_PROJECT\JAVA\JAVA_DESKTOP\src\main\resources" />
+      <recent name="C:\SIP_PROJECT\JAVA\JAVA_DESKTOP\src\sipphone" />
       <recent name="C:\SIP_PROJECT\JAVA\JAVA_DESKTOP\src" />
       <recent name="C:\SIP_PROJECT\JAVA\J_SIP" />
-      <recent name="C:\SIP_PROJECT\JAVA\J_SIP\src\sipphone" />
     </key>
   </component>
   <component name="RunManager">
@@ -288,10 +302,10 @@
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1321" y="208" key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog/0.0.1440.860/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1579079589485" />
-    <state x="-1155" y="230" key="#com.intellij.ide.util.MemberChooser" timestamp="1579793456436">
+    <state x="-1155" y="230" key="#com.intellij.ide.util.MemberChooser" timestamp="1580224117773">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1155" y="230" key="#com.intellij.ide.util.MemberChooser/0.0.1440.860/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1579793456436" />
+    <state x="-1155" y="230" key="#com.intellij.ide.util.MemberChooser/0.0.1440.860/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1580224117773" />
     <state x="-1231" y="305" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1579012062247">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
@@ -312,42 +326,42 @@
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1230" y="268" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1440.860/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1579690708838" />
-    <state x="-1180" y="275" key="FileChooserDialogImpl" timestamp="1579528003397">
+    <state x="-1180" y="275" key="FileChooserDialogImpl" timestamp="1579864545614">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1180" y="275" key="FileChooserDialogImpl/0.0.1440.860/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1579528003397" />
-    <state width="1877" height="185" key="GridCell.Tab.0.bottom" timestamp="1579797150369">
+    <state x="-1180" y="275" key="FileChooserDialogImpl/0.0.1440.860/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1579864545614" />
+    <state width="1877" height="114" key="GridCell.Tab.0.bottom" timestamp="1580313562435">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="185" key="GridCell.Tab.0.bottom/0.0.1440.860/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1579797150369" />
-    <state width="1877" height="185" key="GridCell.Tab.0.center" timestamp="1579797150369">
+    <state width="1877" height="114" key="GridCell.Tab.0.bottom/0.0.1440.860/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1580313562435" />
+    <state width="1877" height="114" key="GridCell.Tab.0.center" timestamp="1580313562435">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="185" key="GridCell.Tab.0.center/0.0.1440.860/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1579797150369" />
-    <state width="1877" height="185" key="GridCell.Tab.0.left" timestamp="1579797150369">
+    <state width="1877" height="114" key="GridCell.Tab.0.center/0.0.1440.860/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1580313562435" />
+    <state width="1877" height="114" key="GridCell.Tab.0.left" timestamp="1580313562435">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="185" key="GridCell.Tab.0.left/0.0.1440.860/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1579797150369" />
-    <state width="1877" height="185" key="GridCell.Tab.0.right" timestamp="1579797150369">
+    <state width="1877" height="114" key="GridCell.Tab.0.left/0.0.1440.860/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1580313562435" />
+    <state width="1877" height="114" key="GridCell.Tab.0.right" timestamp="1580313562435">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="185" key="GridCell.Tab.0.right/0.0.1440.860/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1579797150369" />
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1579190425036">
+    <state width="1877" height="114" key="GridCell.Tab.0.right/0.0.1440.860/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1580313562435" />
+    <state width="1877" height="240" key="GridCell.Tab.1.bottom" timestamp="1579880316923">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1440.860/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1579190425036" />
-    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1579190425036">
+    <state width="1877" height="240" key="GridCell.Tab.1.bottom/0.0.1440.860/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1579880316923" />
+    <state width="1877" height="240" key="GridCell.Tab.1.center" timestamp="1579880316923">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1440.860/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1579190425036" />
-    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1579190425036">
+    <state width="1877" height="240" key="GridCell.Tab.1.center/0.0.1440.860/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1579880316923" />
+    <state width="1877" height="240" key="GridCell.Tab.1.left" timestamp="1579880316923">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1440.860/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1579190425036" />
-    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1579190425036">
+    <state width="1877" height="240" key="GridCell.Tab.1.left/0.0.1440.860/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1579880316923" />
+    <state width="1877" height="240" key="GridCell.Tab.1.right" timestamp="1579880316923">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1440.860/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1579190425036" />
+    <state width="1877" height="240" key="GridCell.Tab.1.right/0.0.1440.860/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1579880316923" />
     <state x="-1244" y="234" width="567" height="568" key="RefactorJ.ExtractClass" timestamp="1579686895029">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
@@ -356,22 +370,30 @@
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1480" y="95" key="SettingsEditor/0.0.1440.860/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1579180062061" />
-    <state x="-1373" y="313" key="com.intellij.ide.util.TipDialog" timestamp="1579767649145">
+    <state x="-1373" y="313" key="com.intellij.ide.util.TipDialog" timestamp="1580285249067">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1373" y="313" key="com.intellij.ide.util.TipDialog/0.0.1440.860/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1579767649145" />
+    <state x="-1373" y="313" key="com.intellij.ide.util.TipDialog/0.0.1440.860/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1580285249067" />
     <state x="-1151" y="438" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1578927292418">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1151" y="438" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.860/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1578927292418" />
-    <state x="-1578" y="223" key="new project wizard" timestamp="1578985197237">
+    <state x="-1384" y="257" width="847" height="602" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1579863073825">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1578" y="223" key="new project wizard/0.0.1440.860/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1578985197237" />
+    <state x="-1384" y="257" width="847" height="602" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1440.860/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1579863073825" />
+    <state x="-1578" y="223" key="new project wizard" timestamp="1579864554016">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1578" y="223" key="new project wizard/0.0.1440.860/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1579864554016" />
     <state x="-1218" y="140" key="refactoring.ChangeSignatureDialog" timestamp="1579001324643">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1218" y="140" key="refactoring.ChangeSignatureDialog/0.0.1440.860/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1579001324643" />
+    <state x="-1304" y="240" key="run.anything.popup" timestamp="1580224791755">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1304" y="240" key="run.anything.popup/0.0.1440.860/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1580224791755" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/JAVA_DESKTOP$Main.ic" NAME="Main Coverage Results" MODIFIED="1578907782235" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

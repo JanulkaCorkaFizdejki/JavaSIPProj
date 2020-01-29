@@ -4,6 +4,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
 <GridPane alignment="center" hgap="0" prefHeight="400.0" prefWidth="600.0" stylesheets="@../main/resources/main.css" vgap="0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sipphone.Controller">
    <columnConstraints>
@@ -26,10 +27,16 @@
                              <MenuItem fx:id="keyBoard" mnemonicParsing="false" onAction="#btn_keyboard_panel" text="Keyboard" />
                              <MenuItem fx:id="addUser" mnemonicParsing="false" onAction="#btn_adduser" text="Add User" />
                              <MenuItem fx:id="editList" mnemonicParsing="false" onAction="#btn_remove_number" text="Edit Contact List" />
+                             <MenuItem fx:id="loginPanel" mnemonicParsing="false" onAction="#btn_login_panel" text="Panel logowania" />
                          </items>
                      </Menu>
                  </menus>
              </MenuBar>
+            <Label fx:id="login_status" text="ZALOGOWANY">
+               <font>
+                  <Font size="8.0" />
+               </font>
+            </Label>
             <ImageView fx:id="imgMainBanner" fitHeight="267.0" fitWidth="259.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../main/resources/phone_2.jpg" />

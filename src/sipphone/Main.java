@@ -5,7 +5,11 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import sipphone.model.NetworkDataManager;
+import sipphone.settings.SettingsDataNetwork;
 import sipphone.settings.SettingsWindows;
+
+import java.io.IOException;
 
 
 public class Main extends Application {
@@ -19,7 +23,7 @@ public class Main extends Application {
     }
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args)  {
         launch(args);
     }
 }

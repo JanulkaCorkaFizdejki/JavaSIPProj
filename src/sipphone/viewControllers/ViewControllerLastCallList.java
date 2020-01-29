@@ -1,14 +1,17 @@
 package sipphone.viewControllers;
 
+import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.ContextMenu;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.ContextMenuEvent;
 import javafx.stage.Stage;
 import sipphone.DabatabaseManager;
 import sipphone.SettingsDB;
@@ -21,7 +24,9 @@ import java.io.IOException;
 import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Collection;
 import java.util.ResourceBundle;
+import java.awt.MenuItem;
 
 public class ViewControllerLastCallList implements Initializable {
 
@@ -94,5 +99,11 @@ public class ViewControllerLastCallList implements Initializable {
                 opt_status = opt_status;
         }
         return  opt_status;
+    }
+
+    public void contextMenu(ContextMenuEvent contextMenuEvent) {
+        ContextMenu contextMenu = new ContextMenu();
+        MenuItem menuItem = new MenuItem("menu item");
+        // contextMenu.getItems().add(menuItem);
     }
 }
