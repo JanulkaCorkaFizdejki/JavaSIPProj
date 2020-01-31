@@ -1,41 +1,46 @@
 package sipphone.viewControllers;
 
-import javafx.geometry.Pos;
-import javafx.scene.Scene;
-import javafx.scene.layout.VBox;
-import javafx.stage.Modality;
-import javafx.stage.Stage;
-import javafx.scene.control.Label;
-import javafx.scene.control.Button;
-import sipphone.settings.SettingsWindows;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 
-import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class ConfirmBox {
 
-    static boolean ansver;
+    enum AlertType {
+        WARNING,
+        CONFIRMATION,
+        ERROR,
+        INFORMATION,
+        NONE
+    }
 
-    public static void display (String title, String message, SettingsWindows.WinType winType) {
-        Stage window = new Stage();
-        window.initModality(Modality.APPLICATION_MODAL);
-        window.setTitle(title);
-        window.setWidth(SettingsWindows.WinConfirmBox[0]);
-        window.setMinHeight(SettingsWindows.WinConfirmBox[1]);
+    public static void simpleAlert (String title, String header, String context, AlertType alertType) {
+        Alert alert;
 
+        switch (alertType) {
+            case WARNING:
+                alert = new Alert(Alert.AlertType.WARNING);
+                break;
+            case CONFIRMATION:
+                alert = new Alert(Alert.AlertType.CONFIRMATION);
+            case ERROR:
+                alert = new Alert(Alert.AlertType.ERROR);
+            case INFORMATION:
+                alert = new Alert(Alert.AlertType.INFORMATION);
+            case NONE:
+                alert = new Alert(Alert.AlertType.NONE);
+            default:
+                alert = new Alert(Alert.AlertType.WARNING);
+                break;
+        }
 
-        Button btn_ok = new Button("Ok");
-        btn_ok.setMinWidth(100.0);;
-
-        VBox vBox = new VBox(10);
-        vBox.setAlignment(Pos.CENTER);
-        Label label = new Label();
-        label.setText(message);
-        vBox.getChildren().add(label);
-        vBox.getChildren().add(btn_ok);
-        Scene scene = new Scene(vBox);
-        window.setScene(scene);
-        window.showAndWait();
+        alert.setResizable(false);
+        alert.getButtonTypes().clear();
+        alert.setTitle(title);
+        alert.setHeaderText(header);
+        alert.setContentText(context);
+        ButtonType buttonOk = new ButtonType("OK");
+        alert.getButtonTypes().add(buttonOk);
+        alert.showAndWait();
     }
 }

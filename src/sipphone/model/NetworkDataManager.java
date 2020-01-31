@@ -40,7 +40,9 @@ public class NetworkDataManager {
                 postData.append('=');
                 postData.append(URLEncoder.encode(String.valueOf(param.getValue()), "UTF-8"));
             }
+
             byte[] postDataBytes = postData.toString().getBytes("UTF-8");
+
 
             HttpURLConnection conn = (HttpURLConnection)url.openConnection();
             conn.setRequestMethod("POST");
@@ -48,6 +50,10 @@ public class NetworkDataManager {
             conn.setRequestProperty("Content-Length", String.valueOf(postDataBytes.length));
             conn.setDoOutput(true);
             conn.getOutputStream().write(postDataBytes);
+
+
+            if (conn.getResponseCode() != HttpsURLConnection.HTTP_OK)  return new DataModelLogin(-1, "0", "0", "0");
+
 
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(conn.getInputStream(), "UTF-8"));
             StringBuilder stringBuilder = new StringBuilder();
@@ -65,6 +71,7 @@ public class NetworkDataManager {
                 dataModelLogin = new DataModelLogin(jsonObject.getInt("status"), "0", "0", "0");
             }
             return dataModelLogin;
+
         } catch (MalformedURLException e) {
             System.out.println(e);
 

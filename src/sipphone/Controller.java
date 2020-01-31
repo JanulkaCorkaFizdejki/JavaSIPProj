@@ -2,15 +2,9 @@ package sipphone;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
-import sipphone.model.CurrentConnect;
-import sipphone.model.NetworkDataManager;
-import sipphone.model.SystemMotherBoardNumber;
-import sipphone.settings.GlobalQueryDB;
-import sipphone.settings.SettingsDataNetwork;
 import sipphone.viewControllers.ViewControllerKeyboardPanelPhone;
 import sipphone.viewControllers.ViewControllerLastCallList;
 import sipphone.viewControllers.ViewControllerLoginPanel;
-import webphone. *;
 
 import java.io.IOException;
 import java.net.URL;
@@ -18,7 +12,6 @@ import java.security.NoSuchAlgorithmException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
-import java.util.logging.Logger;
 
 
 public class Controller implements Initializable {
@@ -53,9 +46,10 @@ public class Controller implements Initializable {
 //            CurrentConnect.id_current_connect = 0;
 //        }
 
-        // TEST DATA MANAGER
 //        NetworkDataManager networkDataManager = new NetworkDataManager(SettingsDataNetwork.felgApiBaseURL_AUTH);
-//        networkDataManager.logIn();
+//        DataModelLogin dataModelLogin = networkDataManager.logIn("99613711", "Hobson123");
+//
+//        System.out.println(dataModelLogin.getStatus());
 
     }
 
@@ -98,7 +92,7 @@ public class Controller implements Initializable {
         }
     }
 
-    private void initialView () throws SQLException {
+    public void initialView () throws SQLException {
 
         DabatabaseManager DBM = new DabatabaseManager(SettingsDB.dbname);
         String query = "SELECT status FROM user_auth LIMIT 1";
