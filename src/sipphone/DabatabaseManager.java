@@ -97,7 +97,7 @@ public class DabatabaseManager {
             pstmt.executeUpdate();
             this.conn.close();
         } catch (SQLException e) {
-
+            System.out.println("DELETE EX: " + e);
         }
     }
 

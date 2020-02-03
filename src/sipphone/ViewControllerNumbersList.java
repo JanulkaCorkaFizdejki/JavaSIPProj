@@ -29,6 +29,7 @@ public class ViewControllerNumbersList implements Initializable {
     ObservableList <DataModelNumberList> list = FXCollections.observableArrayList();
     public TableView<DataModelNumberList> tbl_numbersList;
 
+
     void newpage (String event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("numbers_list.fxml"));
         Parent root = (Parent) fxmlLoader.load();

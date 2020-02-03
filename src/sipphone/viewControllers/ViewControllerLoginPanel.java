@@ -37,12 +37,13 @@ public class ViewControllerLoginPanel implements Initializable {
     public Pane pane_top_login;
     public Button btn_logIn;
     public CheckBox check_edit_fields;
-    public Pane pane_status_icon;
     public Circle icon_status;
+    public Pane pane_delete;
     private boolean isIssetUserDB = false;
     private boolean get_login_status = false;
     public Label lbl_login_status;
     public ProgressIndicator progressIndicator = new ProgressIndicator();
+
 
 
     enum LoginView {
@@ -55,24 +56,6 @@ public class ViewControllerLoginPanel implements Initializable {
     enum TypeAuth {
         FIRST_LOGIN,
         UPDATE_LOGIN
-    }
-
-    public class UserLoginPassword {
-
-        private String login, password;
-
-        public UserLoginPassword (String login, String password) {
-            this.login = login;
-            this.password = password;
-        }
-
-        public String getLogin() {
-            return login;
-        }
-
-        public String getPassword() {
-            return password;
-        }
     }
 
     public void newpage(String event) throws IOException {
@@ -132,6 +115,9 @@ public class ViewControllerLoginPanel implements Initializable {
             this.paneLoginToggle(LoginView.SHOW_BOTTOM);
             lbl_login_status.setText("UŻYTKOWNIK NIE ISTNIEJE");
             icon_status.setFill(Color.valueOf(AppColors.getColor(AppColors.Colors.yellow)));
+            this.loginPassdordTxtFieldDisable(false);
+            txtfield_password.setText("");
+            txtfield_login.setText("");
         }
     }
 
@@ -167,8 +153,7 @@ public class ViewControllerLoginPanel implements Initializable {
 
     private void getUserData (TypeAuth typeAuth) {
         progressIndicator.setVisible(true);
-        txtfield_password.setDisable(true);
-        txtfield_login.setDisable(true);
+        this.loginPassdordTxtFieldDisable(true);
         btn_logIn.setDisable(true);
         check_edit_fields.setDisable(true);
 
@@ -183,14 +168,14 @@ public class ViewControllerLoginPanel implements Initializable {
 
                 if (typeAuth == TypeAuth.FIRST_LOGIN) {
                     String lang = (dataModelLogin.getLang().equalsIgnoreCase("") == true) ? System.getProperty("user.language") : dataModelLogin.getLang();
-                    String query = "INSERT INTO " + SettingsDB.DBTableSip.user_auth + " (uid, token, status, lang, password) VALUES (\"" +
-                            login + "\", \"" + dataModelLogin.getToken() + "\", \"" + dataModelLogin.getStatus() + "\", \"" + lang.toUpperCase() + "\", \"" + password + "\")";
+                    String query = "INSERT INTO " + SettingsDB.DBTableSip.user_auth + " (uid, token, status, lang, password, apiid) VALUES (\"" +
+                            login + "\", \"" + dataModelLogin.getToken() + "\", \"" + dataModelLogin.getStatus() + "\", \"" + lang.toUpperCase() + "\", \"" + password + "\", \"" + dataModelLogin.getUid() + "\")";
 
                     DabatabaseManager DBM = new DabatabaseManager(SettingsDB.dbname);
                     DBM.insert(query);
 
                 } else if (typeAuth == TypeAuth.UPDATE_LOGIN) {
-                    String query = "UPDATE user_auth SET status=1, token=\"" + dataModelLogin.getToken() + "\"";
+                    String query = "UPDATE " + SettingsDB.DBTableSip.user_auth + " SET status=1, token=\"" + dataModelLogin.getToken() + "\"";
 
                     DabatabaseManager DBM = new DabatabaseManager(SettingsDB.dbname);
                     DBM.update(query);
@@ -224,14 +209,26 @@ public class ViewControllerLoginPanel implements Initializable {
     }
 
 
+    public void deleteUser(ActionEvent actionEvent) throws SQLException {
+        String query = "DELETE FROM " + SettingsDB.DBTableSip.user_auth;
+        DabatabaseManager DBM = new DabatabaseManager(SettingsDB.dbname);
+        DBM.delete(query);
+        isIssetUserDB = false;
+        this.loadDataView();
+    }
+
+
     public void checkBoxClick(ActionEvent actionEvent) {
        if (check_edit_fields.isSelected()) {
-           txtfield_login.setDisable(false);
-           txtfield_password.setDisable(false);
+            this.loginPassdordTxtFieldDisable(false);
        } else {
-           txtfield_login.setDisable(true);
-           txtfield_password.setDisable(true);
+           this.loginPassdordTxtFieldDisable(true);
        }
+    }
+
+    private void loginPassdordTxtFieldDisable (boolean disable) {
+            txtfield_login.setDisable(disable);
+            txtfield_password.setDisable(disable);
     }
 
 
@@ -242,6 +239,7 @@ public class ViewControllerLoginPanel implements Initializable {
                 pane_login.setVisible(false);
                 lbl_login_status.setText("ZALOGOWANY");
                 icon_status.setFill(Color.valueOf(AppColors.getColor(AppColors.Colors.green)));
+                pane_delete.setVisible(false);
                 break;
             case SHOW_BOTTOM:
                 pane_top_login.setVisible(false);
@@ -249,6 +247,11 @@ public class ViewControllerLoginPanel implements Initializable {
                 lbl_login_status.setText("WYLOGOWANY");
                 icon_status.setFill(Color.valueOf(AppColors.getColor(AppColors.Colors.red)));
                 check_edit_fields.setSelected(false);
+                if (!isIssetUserDB) {
+                    pane_delete.setVisible(false);
+                } else {
+                    pane_delete.setVisible(true);
+                }
                 break;
             case SHOW_ALL:
                 pane_top_login.setVisible(true);

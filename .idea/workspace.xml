@@ -7,43 +7,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/11.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/loader.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/plus-2-24.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sipphone/datamodel/DataModelLogin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sipphone/login_panel.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sipphone/model/SystemMotherBoardNumber.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sipphone/model/ViewObserver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sipphone/settings/AppColors.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sipphone/viewControllers/LoaderIndicator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sipphone/viewControllers/ViewControllerLoginPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sipphone/viewControllers/ToolpitView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db_query.txt" beforeDir="false" afterPath="$PROJECT_DIR$/db_query.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/J_SIP/main/resources/11.svg" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/J_SIP/main/resources/11.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/J_SIP/main/resources/7.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/J_SIP/main/resources/8.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/J_SIP/main/resources/8.svg.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/J_SIP/sipphone/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/J_SIP/sipphone/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/J_SIP/sipphone/DabatabaseManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/J_SIP/sipphone/DabatabaseManager.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/J_SIP/sipphone/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/J_SIP/sipphone/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J_SIP/sipphone/SettingsDB$DBTableSip.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/J_SIP/sipphone/SettingsDB$DBTableSip.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J_SIP/sipphone/ViewControllerRemoveNumber.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/J_SIP/sipphone/ViewControllerRemoveNumber.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J_SIP/sipphone/keyboard_panel_phone.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/J_SIP/sipphone/keyboard_panel_phone.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J_SIP/sipphone/last_call_list.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/J_SIP/sipphone/last_call_list.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J_SIP/sipphone/model/NetworkDataManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/J_SIP/sipphone/model/NetworkDataManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/J_SIP/sipphone/ViewContollerAddUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/J_SIP/sipphone/ViewContollerAddUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/J_SIP/sipphone/ViewControllerNumbersList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/J_SIP/sipphone/ViewControllerNumbersList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/J_SIP/sipphone/login_panel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/J_SIP/sipphone/login_panel.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/J_SIP/sipphone/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/J_SIP/sipphone/sample.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J_SIP/sipphone/settings/SettingsDataNetwork.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/J_SIP/sipphone/settings/SettingsDataNetwork.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J_SIP/sipphone/viewControllers/ConfirmBox.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/J_SIP/sipphone/viewControllers/ConfirmBox.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J_SIP/sipphone/viewControllers/ViewControllerKeyboardPanelPhone$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/J_SIP/sipphone/viewControllers/ViewControllerKeyboardPanelPhone$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J_SIP/sipphone/viewControllers/ViewControllerKeyboardPanelPhone.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/J_SIP/sipphone/viewControllers/ViewControllerKeyboardPanelPhone.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/J_SIP/sipphone/viewControllers/ViewControllerLastCallList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/J_SIP/sipphone/viewControllers/ViewControllerLastCallList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/J_SIP/sipphone/viewControllers/ViewControllerLoginPanel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/J_SIP/sipphone/viewControllers/ViewControllerLoginPanel$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/J_SIP/sipphone/viewControllers/ViewControllerLoginPanel$LoginView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/J_SIP/sipphone/viewControllers/ViewControllerLoginPanel$LoginView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/J_SIP/sipphone/viewControllers/ViewControllerLoginPanel$TypeAuth.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/J_SIP/sipphone/viewControllers/ViewControllerLoginPanel$TypeAuth.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/J_SIP/sipphone/viewControllers/ViewControllerLoginPanel$UserLoginPassword.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/J_SIP/sipphone/viewControllers/ViewControllerLoginPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/J_SIP/sipphone/viewControllers/ViewControllerLoginPanel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sipphone/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sipphone/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sipphone/DabatabaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sipphone/DabatabaseManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sipphone/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sipphone/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sipphone/SettingsDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sipphone/SettingsDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sipphone/ViewControllerRemoveNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sipphone/ViewControllerRemoveNumber.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sipphone/keyboard_panel_phone.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sipphone/keyboard_panel_phone.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sipphone/last_call_list.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sipphone/last_call_list.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sipphone/model/NetworkDataManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sipphone/model/NetworkDataManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sipphone/ViewContollerAddUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sipphone/ViewContollerAddUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sipphone/ViewControllerNumbersList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sipphone/ViewControllerNumbersList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sipphone/login_panel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sipphone/login_panel.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sipphone/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sipphone/sample.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sipphone/settings/SettingsDataNetwork.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sipphone/settings/SettingsDataNetwork.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sipphone/viewControllers/ConfirmBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sipphone/viewControllers/ConfirmBox.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sipphone/viewControllers/ViewControllerKeyboardPanelPhone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sipphone/viewControllers/ViewControllerKeyboardPanelPhone.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sipphone/viewControllers/ViewControllerLastCallList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sipphone/viewControllers/ViewControllerLastCallList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sipphone/viewControllers/ViewControllerLoginPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sipphone/viewControllers/ViewControllerLoginPanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,6 +98,7 @@
         <option value="XSLT Stylesheet" />
         <option value="FxmlFile" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -311,10 +301,10 @@
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1321" y="208" key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog/0.0.1440.860/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1579079589485" />
-    <state x="-1155" y="230" key="#com.intellij.ide.util.MemberChooser" timestamp="1580395183308">
+    <state x="-1155" y="230" key="#com.intellij.ide.util.MemberChooser" timestamp="1580744985872">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1155" y="230" key="#com.intellij.ide.util.MemberChooser/0.0.1440.860/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1580395183308" />
+    <state x="-1155" y="230" key="#com.intellij.ide.util.MemberChooser/0.0.1440.860/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1580744985872" />
     <state x="-1231" y="305" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1579012062247">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
@@ -331,10 +321,10 @@
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1454" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1440.860/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1579684222846" />
-    <state x="-1230" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1580463396247">
+    <state x="-1230" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1580742349227">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1230" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.860/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1580463396247" />
+    <state x="-1230" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.860/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1580742349227" />
     <state x="-1230" y="268" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1579690708838">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
@@ -343,22 +333,22 @@
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1180" y="275" key="FileChooserDialogImpl/0.0.1440.860/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1579864545614" />
-    <state width="1877" height="206" key="GridCell.Tab.0.bottom" timestamp="1580486616367">
+    <state width="1877" height="206" key="GridCell.Tab.0.bottom" timestamp="1580745577007">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="206" key="GridCell.Tab.0.bottom/0.0.1440.860/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1580486616367" />
-    <state width="1877" height="206" key="GridCell.Tab.0.center" timestamp="1580486616367">
+    <state width="1877" height="206" key="GridCell.Tab.0.bottom/0.0.1440.860/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1580745577007" />
+    <state width="1877" height="206" key="GridCell.Tab.0.center" timestamp="1580745577007">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="206" key="GridCell.Tab.0.center/0.0.1440.860/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1580486616367" />
-    <state width="1877" height="206" key="GridCell.Tab.0.left" timestamp="1580486616367">
+    <state width="1877" height="206" key="GridCell.Tab.0.center/0.0.1440.860/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1580745577007" />
+    <state width="1877" height="206" key="GridCell.Tab.0.left" timestamp="1580745577007">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="206" key="GridCell.Tab.0.left/0.0.1440.860/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1580486616367" />
-    <state width="1877" height="206" key="GridCell.Tab.0.right" timestamp="1580486616367">
+    <state width="1877" height="206" key="GridCell.Tab.0.left/0.0.1440.860/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1580745577007" />
+    <state width="1877" height="206" key="GridCell.Tab.0.right" timestamp="1580745577007">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="206" key="GridCell.Tab.0.right/0.0.1440.860/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1580486616367" />
+    <state width="1877" height="206" key="GridCell.Tab.0.right/0.0.1440.860/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1580745577007" />
     <state width="1877" height="240" key="GridCell.Tab.1.bottom" timestamp="1579880316923">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
@@ -383,10 +373,10 @@
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1480" y="95" key="SettingsEditor/0.0.1440.860/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1579180062061" />
-    <state x="-1373" y="313" key="com.intellij.ide.util.TipDialog" timestamp="1580486681957">
+    <state x="-1373" y="313" key="com.intellij.ide.util.TipDialog" timestamp="1580728282535">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1373" y="313" key="com.intellij.ide.util.TipDialog/0.0.1440.860/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1580486681957" />
+    <state x="-1373" y="313" key="com.intellij.ide.util.TipDialog/0.0.1440.860/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1580728282535" />
     <state x="-1151" y="438" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1578927292418">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>

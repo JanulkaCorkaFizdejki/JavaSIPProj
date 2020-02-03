@@ -2,63 +2,58 @@
 
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<GridPane alignment="center" hgap="0" prefHeight="400.0" prefWidth="600.0" stylesheets="@../main/resources/main.css" vgap="0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sipphone.Controller">
-   <columnConstraints>
-      <ColumnConstraints />
-      <ColumnConstraints />
-      <ColumnConstraints />
-   </columnConstraints>
-   <rowConstraints>
-      <RowConstraints />
-   </rowConstraints>
+<Pane minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="601.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sipphone.Controller">
    <children>
-      <VBox alignment="BASELINE_CENTER" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;">
-         <children>
-             <MenuBar fx:id="MinMenu" prefHeight="25.0" prefWidth="600.0">
-                 <menus>
-                     <Menu mnemonicParsing="false" text="Akcje">
-                         <items>
-                             <MenuItem fx:id="callList" mnemonicParsing="false" onAction="#btn_numbers" text="Call List" />
-                             <MenuItem fx:id="lastCallList" mnemonicParsing="false" onAction="#btn_last_call_list" text="Last Call List" />
-                             <MenuItem fx:id="keyBoard" mnemonicParsing="false" onAction="#btn_keyboard_panel" text="Keyboard" />
-                             <MenuItem fx:id="addUser" mnemonicParsing="false" onAction="#btn_adduser" text="Add User" />
-                             <MenuItem fx:id="editList" mnemonicParsing="false" onAction="#btn_remove_number" text="Edit Contact List" />
-                             <MenuItem fx:id="loginPanel" mnemonicParsing="false" onAction="#btn_login_panel" text="Panel logowania" />
-                         </items>
-                     </Menu>
-                 </menus>
-             </MenuBar>
-            <Label fx:id="login_status" text="ZALOGOWANY">
-               <font>
-                  <Font size="8.0" />
-               </font>
-            </Label>
-            <ImageView fx:id="imgMainBanner" fitHeight="267.0" fitWidth="259.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../main/resources/phone_2.jpg" />
-               </image>
-               <VBox.margin>
-                  <Insets top="30.0" />
-               </VBox.margin></ImageView>
-             <ToolBar minWidth="600.0" prefHeight="36.0" prefWidth="600.0">
-                 <items>
-                     <Button mnemonicParsing="false" onAction="#btn_adduser" prefHeight="25.0" prefWidth="120.0" text="Add User" />
-                     <Button id="btn_test" fx:id="btn_test" mnemonicParsing="false" onAction="#start_btn" prefHeight="25.0" prefWidth="120.0" text="TEST" />
-                     <Button id="btn_numbers" mnemonicParsing="false" onAction="#btn_numbers" prefHeight="25.0" prefWidth="120.0" text="Contact List" />
-                     <Button fx:id="btn_remove_user" mnemonicParsing="false" onAction="#btn_remove_number" prefHeight="25.0" prefWidth="120.0" text="Remove User" />
-                 </items>
-               <padding>
-                  <Insets bottom="20.0" left="60.0" top="20.0" />
-               </padding>
-               <VBox.margin>
-                  <Insets top="20.0" />
-               </VBox.margin>
-             </ToolBar>
-         </children>
-      </VBox>
+      <TabPane fx:id="tab_pane" layoutX="1.0" layoutY="27.0" prefHeight="273.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Kontakty">
+              <AnchorPane id="contactList" prefHeight="266.0" prefWidth="600.0">
+                  <children>
+                     <Button fx:id="btn_add_user" layoutX="555.0" layoutY="10.0" mnemonicParsing="false" onAction="#btn_adduser" text="+" />
+                      <Label layoutX="14.0" layoutY="14.0" text="LISTA KONTAKTÓW">
+                        <font>
+                           <Font name="System Bold" size="12.0" />
+                        </font></Label>
+                     <TableView fx:id="pane_tbl_contact_list" layoutX="14.0" layoutY="31.0" prefHeight="200.0" prefWidth="567.0">
+                       <columns>
+                         <TableColumn fx:id="pane_tbl_contact_list_col_lp" prefWidth="47.0" text="Lp" />
+                         <TableColumn fx:id="pane_tbl_contact_list_col_name" prefWidth="254.0" text="Nazwa użytkownika" />
+                           <TableColumn fx:id="pane_tbl_contact_list_col_number" prefWidth="265.0" text="Numer" />
+                       </columns>
+                     </TableView>
+                  </children>
+              </AnchorPane>
+          </Tab>
+          <Tab text="Ostatnie połączenia" />
+        </tabs>
+      </TabPane>
+       <ToolBar layoutX="1.0" layoutY="328.0" minWidth="600.0" prefHeight="75.0" prefWidth="600.0">
+           <items>
+               <Button mnemonicParsing="false" onAction="#btn_adduser" prefHeight="25.0" prefWidth="120.0" text="Add User" />
+               <Button id="btn_test" fx:id="btn_test" mnemonicParsing="false" onAction="#start_btn" prefHeight="25.0" prefWidth="120.0" text="TEST" />
+               <Button id="btn_numbers" mnemonicParsing="false" onAction="#btn_numbers" prefHeight="25.0" prefWidth="120.0" text="Contact List" />
+               <Button fx:id="btn_remove_user" mnemonicParsing="false" onAction="#btn_remove_number" prefHeight="25.0" prefWidth="120.0" text="Remove User" />
+           </items>
+         <padding>
+            <Insets bottom="20.0" left="60.0" top="20.0" />
+         </padding>
+       </ToolBar>
+       <MenuBar fx:id="MinMenu" layoutX="1.0" layoutY="2.0" prefHeight="25.0" prefWidth="600.0">
+           <menus>
+               <Menu mnemonicParsing="false" text="Akcje">
+                   <items>
+                       <MenuItem fx:id="callList" mnemonicParsing="false" onAction="#btn_numbers" text="Call List" />
+                       <MenuItem fx:id="lastCallList" mnemonicParsing="false" onAction="#btn_last_call_list" text="Last Call List" />
+                       <MenuItem fx:id="keyBoard" mnemonicParsing="false" onAction="#btn_keyboard_panel" text="Keyboard" />
+                       <MenuItem fx:id="addUser" mnemonicParsing="false" onAction="#btn_adduser" text="Add User" />
+                       <MenuItem fx:id="editList" mnemonicParsing="false" onAction="#btn_remove_number" text="Edit Contact List" />
+                       <MenuItem fx:id="loginPanel" mnemonicParsing="false" onAction="#btn_login_panel" text="Panel logowania" />
+                   </items>
+               </Menu>
+           </menus>
+       </MenuBar>
    </children>
-</GridPane>
+</Pane>
