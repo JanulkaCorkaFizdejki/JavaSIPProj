@@ -4,21 +4,41 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sipphone.ViewContollerAddUser">
+<AnchorPane prefHeight="400.0" prefWidth="539.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sipphone.ViewContollerAddUser">
    <children>
-      <Pane prefHeight="400.0" prefWidth="300.0">
+      <Pane prefHeight="400.0" prefWidth="600.0">
          <children>
-            <Button layoutX="76.0" layoutY="311.0" mnemonicParsing="false" onMouseClicked="#addUserActn" prefHeight="25.0" prefWidth="149.0" text="Dodaj" />
-            <Label layoutX="32.0" layoutY="151.0" text="Nr telefonu:" />
-            <Label layoutX="32.0" layoutY="168.0" text="format: (np. 48 666 666 666)">
+            <Pane fx:id="pane_form_addUser" layoutX="26.0" layoutY="83.0" prefHeight="234.0" prefWidth="548.0">
+               <children>
+                  <TextField fx:id="lbl_number" layoutX="99.0" layoutY="70.0" onKeyPressed="#inputNumberActn" prefHeight="25.0" prefWidth="350.0" />
+                  <TextField fx:id="lbl_user_name" layoutX="99.0" layoutY="132.0" onAction="#inputName" prefHeight="25.0" prefWidth="350.0" />
+                  <Label layoutX="99.0" layoutY="114.0" text="Nazwa użytkownika:" textFill="#9a9a9a">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="99.0" layoutY="51.0" text="Nr telefonu:" textFill="#9a9a9a">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="81.0" layoutY="76.0" text="+" />
+                  <Button fx:id="btn_add_user" layoutX="200.0" layoutY="181.0" mnemonicParsing="false" onMouseClicked="#addUserActn" prefHeight="25.0" prefWidth="149.0" text="Dodaj" />
+                  <Label fx:id="lbl_error_format_txt" layoutX="409.0" layoutY="57.0" text="[FORMAT!]" textFill="#d71e1e">
+                     <font>
+                        <Font size="8.0" />
+                     </font>
+                  </Label>
+               </children></Pane>
+            <Button fx:id="btn_go_back" layoutX="25.0" layoutY="20.0" mnemonicParsing="false" onAction="#btnGoBack" text="&lt;">
                <font>
-                  <Font size="8.0" />
+                  <Font name="Arial Bold" size="12.0" />
+               </font></Button>
+            <Label layoutX="210.0" layoutY="66.0" text="DODAJ NOWEGO UŻYTKOWNIKA" textOverrun="CLIP">
+               <font>
+                  <Font size="10.0" />
                </font>
             </Label>
-            <TextField fx:id="lbl_number" layoutX="31.0" layoutY="188.0" prefHeight="25.0" prefWidth="238.0" />
-            <TextField fx:id="lbl_user_name" layoutX="31.0" layoutY="256.0" prefHeight="25.0" prefWidth="238.0" />
-            <Label layoutX="17.0" layoutY="192.0" text="+" />
-            <Label layoutX="32.0" layoutY="232.0" text="Nazwa użytkownika" />
          </children>
       </Pane>
    </children>

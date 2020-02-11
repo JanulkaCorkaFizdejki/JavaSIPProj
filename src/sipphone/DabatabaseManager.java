@@ -8,6 +8,10 @@ public class DabatabaseManager {
     private String db_name;
     private Connection conn = null;
 
+    enum kindQuery {
+        custom
+    }
+
     public  DabatabaseManager (String db_name) {
         this.db_name = db_name;
     }
@@ -60,6 +64,18 @@ public class DabatabaseManager {
             this.conn = DriverManager.getConnection("jdbc:sqlite:../../" + this.db_name + ".db");
             Statement stmt = this.conn.createStatement();
             ResultSet rs = (queryAll) ? stmt.executeQuery(queryOption) : stmt.executeQuery("SELECT * FROM " + tableName + " WHERE " + queryOption);
+            return rs;
+        } catch (Exception e) {
+            System.out.println(e);
+            return null;
+        }
+    }
+
+    public ResultSet selectCustom (String query) {
+        try {
+            this.conn = DriverManager.getConnection("jdbc:sqlite:../../" + this.db_name + ".db");
+            Statement stmt = this.conn.createStatement();
+            ResultSet rs = stmt.executeQuery(query);
             return rs;
         } catch (Exception e) {
             System.out.println(e);

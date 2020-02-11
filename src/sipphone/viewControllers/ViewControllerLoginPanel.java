@@ -2,29 +2,27 @@ package sipphone.viewControllers;
 
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
-import javafx.scene.shape.SVGPath;
 import javafx.stage.Stage;
-import sipphone.Controller;
 import sipphone.DabatabaseManager;
 import sipphone.SettingsDB;
 import sipphone.datamodel.DataModelLogin;
 import sipphone.model.NetworkDataManager;
 import sipphone.settings.AppColors;
 import sipphone.settings.SettingsDataNetwork;
-import sipphone.settings.SettingsWindows;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 
@@ -39,10 +37,12 @@ public class ViewControllerLoginPanel implements Initializable {
     public CheckBox check_edit_fields;
     public Circle icon_status;
     public Pane pane_delete;
+    public Button btn_go_back;
     private boolean isIssetUserDB = false;
     private boolean get_login_status = false;
     public Label lbl_login_status;
     public ProgressIndicator progressIndicator = new ProgressIndicator();
+    private boolean loadStatus = false;
 
 
 
@@ -58,14 +58,6 @@ public class ViewControllerLoginPanel implements Initializable {
         UPDATE_LOGIN
     }
 
-    public void newpage(String event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../login_panel.fxml"));
-        Parent root = (Parent) fxmlLoader.load();
-        Stage stage = new Stage();
-        stage.setScene(new Scene(root, SettingsWindows.WinMainChild[0], SettingsWindows.WinMainChild[1]));
-        stage.setTitle("Panel logowania");
-        stage.show();
-    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -114,7 +106,7 @@ public class ViewControllerLoginPanel implements Initializable {
             check_edit_fields.setVisible(false);
             this.paneLoginToggle(LoginView.SHOW_BOTTOM);
             lbl_login_status.setText("UŻYTKOWNIK NIE ISTNIEJE");
-            icon_status.setFill(Color.valueOf(AppColors.getColor(AppColors.Colors.yellow)));
+            icon_status.setFill(Color.valueOf(AppColors.getColor(AppColors.Colors.red)));
             this.loginPassdordTxtFieldDisable(false);
             txtfield_password.setText("");
             txtfield_login.setText("");
@@ -160,7 +152,11 @@ public class ViewControllerLoginPanel implements Initializable {
         String login = txtfield_login.getText();
         String password = txtfield_password.getText();
 
+        btn_go_back.setDisable(true);
         Runnable runnable = () -> {
+
+            this.loadStatus = true;
+
             NetworkDataManager networkDataManager = new NetworkDataManager(SettingsDataNetwork.felgApiBaseURL_AUTH);
             DataModelLogin dataModelLogin = networkDataManager.logIn(login, password);
 
@@ -187,6 +183,7 @@ public class ViewControllerLoginPanel implements Initializable {
                     } catch (SQLException e) {
                         e.printStackTrace();
                     }
+                    btn_go_back.setDisable(false);
                     btn_logIn.setDisable(false);
                     progressIndicator.setVisible(false);
                     check_edit_fields.setDisable(false);
@@ -194,6 +191,7 @@ public class ViewControllerLoginPanel implements Initializable {
 
             } else {
                 Platform.runLater(() -> {
+                    btn_go_back.setDisable(false);
                     txtfield_password.setDisable(false);
                     txtfield_login.setDisable(false);
                     btn_logIn.setDisable(false);
@@ -203,6 +201,8 @@ public class ViewControllerLoginPanel implements Initializable {
                     ConfirmBox.simpleAlert("Błąd danych", "Nieprawidłowe dane!", "Twoje hasło lub login jest nieprawidłowy. \nWprowadź poprawne dany, aby się zalogować.", ConfirmBox.AlertType.WARNING);
                 });
             }
+
+            this.loadStatus = false;
         };
         Thread thread = new Thread(runnable);
         thread.start();
@@ -231,6 +231,20 @@ public class ViewControllerLoginPanel implements Initializable {
             txtfield_password.setDisable(disable);
     }
 
+    public void btnGoBack(ActionEvent actionEvent) throws IOException {
+        if (!loadStatus) this.goBack(actionEvent);
+    }
+
+
+    private void goBack (Event event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../sample.fxml"));
+        Parent root = (Parent) fxmlLoader.load();
+        Scene scene = new Scene(root);
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.setScene(scene);
+        window.show();
+    }
+
 
     private void paneLoginToggle (LoginView loginView)  {
         switch (loginView) {
@@ -245,7 +259,7 @@ public class ViewControllerLoginPanel implements Initializable {
                 pane_top_login.setVisible(false);
                 pane_login.setVisible(true);
                 lbl_login_status.setText("WYLOGOWANY");
-                icon_status.setFill(Color.valueOf(AppColors.getColor(AppColors.Colors.red)));
+                icon_status.setFill(Color.valueOf(AppColors.getColor(AppColors.Colors.yellow)));
                 check_edit_fields.setSelected(false);
                 if (!isIssetUserDB) {
                     pane_delete.setVisible(false);

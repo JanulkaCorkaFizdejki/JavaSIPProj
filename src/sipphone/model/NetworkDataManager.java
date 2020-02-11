@@ -7,14 +7,14 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import sipphone.datamodel.DataModelLogin;
 import sipphone.settings.SettingsDataNetwork;
-
 import javax.net.ssl.HttpsURLConnection;
+
+
 
 public class NetworkDataManager {
     private String url = null;

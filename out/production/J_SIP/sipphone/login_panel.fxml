@@ -5,49 +5,53 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sipphone.viewControllers.ViewControllerLoginPanel">
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="487.0" prefWidth="435.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sipphone.viewControllers.ViewControllerLoginPanel">
    <children>
-      <Circle fx:id="icon_status" fill="#e83f14" layoutX="32.0" layoutY="33.0" radius="6.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-      <Label fx:id="lbl_login_status" layoutX="51.0" layoutY="24.0" prefHeight="17.0" prefWidth="202.0" text="ZALOGOWANY" />
-      <Label layoutX="52.0" layoutY="9.0" prefHeight="17.0" prefWidth="109.0" text="LOGIN STATUS">
+      <Button fx:id="btn_go_back" layoutX="25.0" layoutY="20.0" mnemonicParsing="false" onAction="#btnGoBack" text="&lt;">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font></Button>
+      <Circle fx:id="icon_status" fill="#e83f14" layoutX="400.0" layoutY="134.0" radius="6.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Label fx:id="lbl_login_status" alignment="CENTER_RIGHT" layoutX="185.0" layoutY="126.0" prefHeight="17.0" prefWidth="202.0" text="ZALOGOWANY" />
+      <Label alignment="CENTER_RIGHT" layoutX="297.0" layoutY="105.0" prefHeight="17.0" prefWidth="109.0" text="LOGIN STATUS">
          <font>
             <Font size="8.0" />
          </font>
       </Label>
-      <Pane fx:id="pane_top_login" layoutX="3.0" layoutY="48.0" prefHeight="47.0" prefWidth="300.0">
+      <Pane fx:id="pane_top_login" layoutX="121.0" layoutY="143.0" prefHeight="47.0" prefWidth="300.0">
          <children>
-            <Button fx:id="btn_logout" layoutX="22.0" layoutY="11.0" mnemonicParsing="false" onAction="#btn_logout" prefHeight="25.0" prefWidth="101.0" text="Wyloguj" />
+            <Button fx:id="btn_logout" layoutX="185.0" layoutY="11.0" mnemonicParsing="false" onAction="#btn_logout" prefHeight="25.0" prefWidth="101.0" text="Wyloguj" />
          </children>
       </Pane>
-      <Separator layoutY="123.0" prefHeight="3.0" prefWidth="300.0" />
-      <Pane fx:id="pane_login" layoutY="130.0" prefHeight="188.0" prefWidth="300.0">
+      <Separator layoutY="221.0" prefHeight="3.0" prefWidth="435.0" />
+      <Pane fx:id="pane_login" layoutX="3.0" layoutY="233.0" prefHeight="188.0" prefWidth="426.0">
          <children>
-            <Button fx:id="btn_logIn" layoutX="186.0" layoutY="142.0" mnemonicParsing="false" onAction="#btn_logIn" prefHeight="25.0" prefWidth="93.0" text="Zaloguj" />
-            <TextField fx:id="txtfield_login" layoutX="22.0" layoutY="39.0" prefHeight="25.0" prefWidth="256.0" />
-            <Label layoutX="23.0" layoutY="20.0" prefHeight="17.0" prefWidth="52.0" text="Login:" />
-            <Label layoutX="23.0" layoutY="75.0" prefHeight="17.0" prefWidth="65.0" text="Password:" />
-            <Pane fx:id="pane_img_loader" layoutX="164.0" layoutY="148.0" prefHeight="14.0" prefWidth="14.0" />
-            <PasswordField fx:id="txtfield_password" layoutX="22.0" layoutY="92.0" prefHeight="25.0" prefWidth="256.0" />
-            <CheckBox fx:id="check_edit_fields" layoutX="25.0" layoutY="126.0" mnemonicParsing="false" onAction="#checkBoxClick" text="Edycja">
+            <Button fx:id="btn_logIn" layoutX="149.0" layoutY="150.0" mnemonicParsing="false" onAction="#btn_logIn" prefHeight="25.0" prefWidth="128.0" text="Zaloguj" />
+            <TextField fx:id="txtfield_login" layoutX="85.0" layoutY="44.0" prefHeight="25.0" prefWidth="256.0" />
+            <Label layoutX="88.0" layoutY="25.0" prefHeight="17.0" prefWidth="52.0" text="Login:" />
+            <Label layoutX="88.0" layoutY="84.0" prefHeight="17.0" prefWidth="65.0" text="Password:" />
+            <Pane fx:id="pane_img_loader" layoutX="129.0" layoutY="156.0" prefHeight="14.0" prefWidth="14.0" />
+            <PasswordField fx:id="txtfield_password" layoutX="85.0" layoutY="101.0" prefHeight="25.0" prefWidth="256.0" />
+            <CheckBox fx:id="check_edit_fields" layoutX="88.0" layoutY="130.0" mnemonicParsing="false" onAction="#checkBoxClick" text="Edycja">
                <font>
                   <Font size="10.0" />
                </font>
             </CheckBox>
          </children>
       </Pane>
-      <Pane fx:id="pane_delete" layoutX="1.0" layoutY="335.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="66.0" prefWidth="300.0">
+      <Pane fx:id="pane_delete" layoutX="3.0" layoutY="421.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="66.0" prefWidth="435.0">
          <children>
-            <Button fx:id="btn_delete_user" layoutX="213.0" layoutY="22.0" mnemonicParsing="false" onAction="#deleteUser" prefHeight="23.0" prefWidth="65.0" text="USUŃ">
+            <Button fx:id="btn_delete_user" layoutX="185.0" layoutY="28.0" mnemonicParsing="false" onAction="#deleteUser" prefHeight="23.0" prefWidth="65.0" text="USUŃ">
                <font>
                   <Font size="10.0" />
                </font>
             </Button>
-            <Label layoutX="198.0" layoutY="2.0" prefHeight="17.0" prefWidth="80.0" text="USUŃ UŻYTKOWNIKA">
+            <Label layoutX="178.0" layoutY="7.0" prefHeight="17.0" prefWidth="80.0" text="USUŃ UŻYTKOWNIKA">
                <font>
                   <Font size="8.0" />
                </font>
             </Label>
-            <Separator prefHeight="3.0" prefWidth="300.0" />
+            <Separator prefHeight="3.0" prefWidth="435.0" />
          </children>
       </Pane>
    </children>

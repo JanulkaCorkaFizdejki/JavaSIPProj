@@ -1,6 +1,9 @@
 package sipphone.datamodel;
 
 import externalDataModel.TimeFormatViews;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+
 
 public class DataModelLastCallList {
     private Long id = null;
@@ -23,6 +26,17 @@ public class DataModelLastCallList {
         this.status = status;
         this.conn_time = conn_time;
     }
+
+
+    enum StatusConnectType {
+        incomingCallsReceived,
+        incomingCallsMissed,
+        outgoingCallsReceived,
+        outgoingCallsMissed,
+        empty
+    }
+
+
 
     public Long getId() {
         return this.id;
@@ -48,11 +62,73 @@ public class DataModelLastCallList {
         return this.date_time_stop;
     }
 
-    public int getStatus() {
-        return this.status;
-    }
-
     public String  getConn_time() {
         return TimeFormatViews.fullFormat(this.conn_time);
+    }
+
+
+    public ImageView getStatus() {
+        Image img = null;
+        if (this.status == 0) {
+            try {
+                img = new Image(setImageStatus(StatusConnectType.incomingCallsReceived));
+            } catch (Exception e) {
+                System.out.println("No source" + e);
+            }
+        }
+        else if (this.status == 1) {
+            try {
+                img = new Image(setImageStatus(StatusConnectType.incomingCallsMissed));
+            } catch (Exception e) {
+                System.out.println("No source" + e);
+            }
+        }
+        else if (this.status == 2) {
+            try {
+                img = new Image(setImageStatus(StatusConnectType.outgoingCallsReceived));
+            } catch (Exception e) {
+                System.out.println("No source" + e);
+            }
+        }
+        else if (this.status == 3) {
+            try {
+                img = new Image(setImageStatus(StatusConnectType.outgoingCallsMissed));
+            } catch (Exception e) {
+                System.out.println("No source" + e);
+            }
+        }
+        else {
+            try {
+                img = new Image(setImageStatus(StatusConnectType.empty));
+            } catch (Exception e) {
+                System.out.println("No source" + e);
+            }
+        }
+
+        ImageView imageView = new ImageView();
+        imageView.setImage(img);
+        return imageView;
+    }
+
+
+    private String setImageStatus(StatusConnectType statusType) {
+        String url;
+        switch (statusType) {
+            case  incomingCallsReceived:
+                url = "main/resources/incomingCallReceived.jpg";
+                break;
+            case incomingCallsMissed:
+                url = "main/resources/incomingCallMissed.jpg";
+                break;
+            case outgoingCallsReceived:
+                url = "main/resources/outgoingCallsReceived.jpg";
+                break;
+            case outgoingCallsMissed:
+                url = "main/resources/outgoingCallsMissed.jpg";
+            default:
+                url = "main/resources/empty.jpg";
+                break;
+        }
+        return url;
     }
 }
